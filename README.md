@@ -9,7 +9,7 @@ This project implements a scalable job importer system using **Node.js**, **Redi
 ```
 /client               # Frontend - Next.js Admin UI
 /server               # Backend - Express server with queue and cron
-/docs/architecture.md # System design overview
+/docs/Job_Importer_System_Design.md # System design overview
 /README.md            # Setup and instructions
 
 
@@ -33,8 +33,8 @@ This project implements a scalable job importer system using **Node.js**, **Redi
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/artha-job-board.git
-cd artha-job-board
+git clone https://github.com/rushikesh7mishra/Knovator-Task.git
+cd Knovator-Task
 ```
 
 ### 2. Install backend dependencies
@@ -49,17 +49,9 @@ npm install
 Create a `.env` file inside `/server`:
 
 ```env
-PORT=5050
-MONGO_URI=mongodb://localhost:27017/jobboard
-REDIS_URL=redis://localhost:6379
-```
-
-### 4. Start Redis server
-
-If not already running:
-
-```bash
-redis-server
+PORT=
+MONGO_URI=
+REDIS_URL=
 ```
 
 ### 5. Start the backend
@@ -130,26 +122,4 @@ These are parsed from XML → JSON → queued → saved into MongoDB.
 - [x] Real-time updates (Socket.IO)
 - [x] Retry handling (via queue job failure)
 - [x] Scalable architecture and modular design
-- [ ] Docker setup (optional)
-- [ ] Deployment to Vercel/Render (optional)
-
----
-
-## 📁 Useful Commands
-
-```bash
-# Clean node modules (if needed)
-rm -rf node_modules
-
-# Rebuild TailwindCSS (if using PostCSS)
-npx tailwindcss build
-
-# Redis CLI (monitor queue)
-redis-cli monitor
-```
-
----
-
-## 📄 License
-
-MIT - Feel free to use for learning and demo purposes.
+- [ ] Deployment to Vercel/Render
