@@ -8,7 +8,7 @@ const jobSchema = new mongoose.Schema({
   location: String,
   datePosted: {
     type: Date,
-    required: false, // ✅ Make datePosted optional
+    required: false,
   },
 });
 

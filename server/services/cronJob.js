@@ -2,7 +2,7 @@ const cron = require('node-cron');
 const fetchJobs = require('./fetchJobsFromAPI');
 const queue = require('../queue');
 
-// ⏰ Run every hour
+//Run every hour
 cron.schedule('0 * * * *', async () => {
   console.log('🔁 Cron triggered');
   const jobs = await fetchJobs();
